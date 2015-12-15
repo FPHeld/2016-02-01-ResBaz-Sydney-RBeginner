@@ -18,7 +18,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 ---
 <!--
   HEADER
-
   Edit the values in the block above to be appropriate for your workshop.
   If the value is not 'true', 'false', 'null', or a number, please use
   double quotation marks around the value, unless specified otherwise.
@@ -27,7 +26,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 
 <!--
   EVENTBRITE
-
   This block includes the Eventbrite registration widget if
   'eventbrite' has been set in the header.  You can delete it if you
   are not using Eventbrite, or leave it in, since it will not be
@@ -47,7 +45,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 
 <!--
   INTRODUCTION
-
   Edit the general explanatory paragraph below if you want to change
   the pitch.
 -->
@@ -71,7 +68,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 
 <!--
   AUDIENCE
-
   Explain who your audience is.  (In particular, tell readers if the
   workshop is only open to people from a particular institution.
 -->
@@ -84,7 +80,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 
 <!--
   LOCATION
-
   This block displays the address and links to maps showing directions
   if the latitude and longitude of the workshop have been set.  You
   can use http://itouchmap.com/latlong.html to find the lat/long of an
@@ -103,7 +98,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 
 <!--
   SPECIAL REQUIREMENTS
-
   Modify the block below if there are any special requirements.
 -->
 <p id="requirements">
@@ -112,11 +106,11 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   <a href="#setup">below</a>). They are also required to abide by
   Software Carpentry's
   <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  If you have problems installing the required software, please contact the instructors before the workshop.
 </p>
 
 <!--
   CONTACT EMAIL ADDRESS
-
   Display the contact email address set in the header.  If an address
   isn't set in the header, the Software Carpentry admin address is
   used.
@@ -136,7 +130,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 
 <!--
   SCHEDULE
-
   Show the workshop's schedule.  Edit the items and times in the table
   to match your plans.  You may also want to change 'Day 1' and 'Day
   2' to be actual dates or days of the week.
@@ -151,7 +144,7 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
       <tr> <td>10:30</td> <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
+      <tr> <td>13:00</td>  <td>Building programs with R</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
@@ -159,10 +152,10 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   <div class="col-md-6">
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
+      <tr> <td>09:00</td>  <td>Data analysis with R</td> </tr>
       <tr> <td>10:30</td>  <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
+      <tr> <td>13:00</td>  <td>Version control with Git</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
       <tr> <td>Dismissal</td>  <td><a href='{{ site.swc_post_survey }}{{ site.github.project_title }}'>Post-workshop Survey</a></td> </tr>
@@ -172,15 +165,11 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 
 <!--
   ETHERPAD
-
   At `_misc/etherpad.txt` you will find a template for the etherpad.
-
   Display the Etherpad for the workshop.  You can set this up in
   advance or on the first day; either way, make sure you push changes
   to GitHub after you have its URL.  To create an Etherpad, go to
-
       http://pad.software-carpentry.org/YYYY-MM-DD-site
-
   where 'YYYY-MM-DD-site' is the identifier for your workshop,
   e.g., '2015-06-10-esu'.
 -->
@@ -196,9 +185,7 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 
 <!--
   SYLLABUS
-
   Show what topics will be covered.
-
   1. If your workshop is R rather than Python, remove the comment
      around that section and put a comment around the Python section.
   2. Some workshops will delete SQL.
@@ -206,16 +193,15 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
      intend to teach.
   4. You may need to move the div's with class="col-md-6" around inside
      the div's with class="row" to balance the multi-column layout.
-
   This is one of the places where people frequently make mistakes, so
   please preview your site before committing, and make sure to run
   'tools/check' as well.
 -->
-<h2>Syllabus</h2>
+<h2 id="syllabus">Syllabus</h2>
 
 <div class="row">
   <div class="col-md-6">
-    <h3>The Unix Shell</h3>
+    <h3 id="syllabus-shell">The Unix Shell</h3>
     <ul>
       <li>Files and directories</li>
       <li>History and tab completion</li>
@@ -223,12 +209,12 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       <li>Looping over files</li>
       <li>Creating and running shell scripts</li>
       <li>Finding things</li>
-      <li><a href="{{site.swc_lessons}}/ref/01-shell.html">Reference...</a></li>
+      <li><a href="{{site.swc_githubio}}/shell-novice/reference.html">Reference...</a></li>
     </ul>
   </div>
   <!--
   <div class="col-md-6">
-    <h3>Programming in Python</h3>
+    <h3 id="syllabus-python">Programming in Python</h3>
     <ul>
       <li>Using libraries</li>
       <li>Working with arrays</li>
@@ -237,27 +223,39 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       <li>Loops and conditionals</li>
       <li>Defensive programming</li>
       <li>Using Python from the command line</li>
-      <li><a href="{{site.swc_lessons}}/ref/03-python.html">Reference...</a></li>
+      <li><a href="{{site.swc_githubio}}/python-novice-inflammation/reference.html">Reference...</a></li>
     </ul>
   </div>
-  -->
-   <div class="col-md-6">
-    <h3>Programming in R</h3>
+-->
+  <div class="col-md-6">
+    <h3 id="syllabus-r">Programming in R</h3>
     <ul>
       <li>Working with vectors and data frames</li>
-      <li>Reading data</li>
-      <li>Managing data with R</li>
+      <li>Reading and plotting data</li>
       <li>Creating and using functions</li>
-      <li>Managing data</li>
-      <li>Plotting with ggplot2</li>
-      <li><a href="{{site.swc_lessons}}/ref/06-R.html">Reference...</a></li>
+      <li>Loops and conditionals</li>
+      <li>Using R from the command line</li>
+      <li><a href="{{site.swc_githubio}}/r-novice-inflammation/reference.html">Reference...</a></li>
     </ul>
   </div>
+  <!--
+  <div class="col-md-6">
+    <h3 id="syllabus-matlab">Programming in MATLAB</h3>
+    <ul>
+      <li>Working with arrays</li>
+      <li>Reading and plotting data</li>
+      <li>Creating and using functions</li>
+      <li>Loops and conditionals</li>
+      <li>Defensive programming</li>
+      <li><a href="{{site.swc_githubio}}/matlab-novice-inflammation/reference.html">Reference...</a></li>
+     </ul>
+   </div>
+   -->
 </div>
 
 <div class="row">
   <div class="col-md-6">
-    <h3>Version Control with Git</h3>
+    <h3 id="syllabus-git">Version Control with Git</h3>
     <ul>
       <li>Creating a repository</li>
       <li>Recording changes to files: <code>add</code>, <code>commit</code>, ...</li>
@@ -267,12 +265,12 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       <li>Resolving conflicts</li>
       <li>Open licenses</li>
       <li>Where to host work, and why</li>
-      <li><a href="{{site.swc_lessons}}/ref/02-git.html">Reference...</a></li>
+      <li><a href="{{site.swc_githubio}}/git-novice/reference.html">Reference...</a></li>
     </ul>
   </div>
-  <!--
+  <!--  
   <div class="col-md-6">
-    <h3>Managing Data with SQL</h3>
+    <h3 id="syllabus-sql">Managing Data with SQL</h3>
     <ul>
       <li>Reading and sorting data</li>
       <li>Filtering with <code>where</code></li>
@@ -282,7 +280,7 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       <li>Combining information from multiple tables using <code>join</code></li>
       <li>Creating, modifying, and deleting data</li>
       <li>Programming with databases</li>
-      <li><a href="{{site.swc_lessons}}/ref/04-sql.html">Reference...</a></li>
+      <li><a href="{{site.swc_githubio}}/sql-novice-survey/reference.html">Reference...</a></li>
     </ul>
   </div>
   -->
@@ -292,11 +290,9 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 
 <!--
   SETUP
-
   Delete irrelevant sections from the setup instructions.  Each
   section is inside a 'div' without any classes to make the beginning
   and end easier to find.
-
   This is the other place where people frequently make mistakes, so
   please preview your site before committing, and make sure to run
   'tools/check' as well.
@@ -670,10 +666,8 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 
 <!--
   Uncomment this section if you are using our virtual machine.
-
 <div id="vm">
   <h3>Virtual Machine</h3>
-
   <p>
     Some instructors prefer to have learners use a virtual machine (VM)
     rather than install software on their own computers.  If your
